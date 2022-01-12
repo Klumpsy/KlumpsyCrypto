@@ -2,7 +2,7 @@ import React from 'react';
 import {Routes, Route, Link} from "react-router-dom"; 
 
 
-import { Navbar, Cryptocurrencies, Exchanges, News, CryptoDetails, Homepage } from './components';
+import { Navbar, Cryptocurrencies, Exchanges, News, CryptoDetails, Homepage, Footer } from './components';
 
 import "./app.css";
 
@@ -20,9 +20,9 @@ const App = () => {
                     <Route path= "/crypto/:coinId" element={<CryptoDetails />} />
                     <Route path ="/news" element = {<News/>} />
                 </Routes>
-            </div>
-            <div className = "footer">
-
+                <div className = "footer">
+                    <Footer/>
+                </div>
             </div>
         </div>
     )

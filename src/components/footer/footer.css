@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap");
+.footer-container {
+  width: 100%;
+  height: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  background-color: #273a35;
+  font-family: 'Hind Madurai', sans-serif;
+}
+
+.footer-container a {
+  text-decoration: none;
+  padding: 5px;
+  color: #6e7e75;
+}
+
+.footer-container a:hover {
+  color: white;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
+}
+/*# sourceMappingURL=footer.css.map */

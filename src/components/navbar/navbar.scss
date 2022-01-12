@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap');
+@import "../../typography"; 
 @import "../../colors"; 
 
 .nav-container {
@@ -8,7 +8,7 @@
     width: 300px; 
     padding-left: 15px; 
     background-color: $mainColor;
-    font-family: 'Hind Madurai', sans-serif;
+    @include mainTypography;
     .logo-container { 
         display: flex;
         align-items: center;
@@ -35,6 +35,8 @@
     }
     .menu-item { 
         margin-bottom: 20px; 
+        border-bottom: 1px solid $linkHover; 
+        padding: 4px; 
         a { 
             display: flex;
             align-items: center;
@@ -43,6 +45,7 @@
             font-size: 12px;
             &:hover { 
                 color: $linkHover; 
+                transition: .2s ease-in; 
                 .menu-item-icon-cryptocurrencies { 
                     color: rgb(7, 7, 7); 
                 }

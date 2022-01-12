@@ -51,6 +51,8 @@
 
 .nav-container .menu-item {
   margin-bottom: 20px;
+  border-bottom: 1px solid #6e7e75;
+  padding: 4px;
 }
 
 .nav-container .menu-item a {
@@ -67,6 +69,8 @@
 
 .nav-container .menu-item a:hover {
   color: #6e7e75;
+  -webkit-transition: .2s ease-in;
+  transition: .2s ease-in;
 }
 
 .nav-container .menu-item a:hover .menu-item-icon-cryptocurrencies {

@@ -1,0 +1,45 @@
+@import "../../typography"; 
+@import "../../colors"; 
+
+h1 { 
+    padding: 10px; 
+    @include mainTypography; 
+}
+
+.home-stats-wrapper { 
+    @include mainTypography; 
+    display: flex;
+    justify-content: space-between;
+    margin: 10px; 
+    .home-stats-container{ 
+        width: 100%; 
+        h2 { 
+            font-size: 14px;
+            color: $accentColor; 
+        }
+        p { 
+            font-size: 18px; 
+            font-weight: 600;
+            color: $mainColor;
+        }
+    }
+}
+
+.home-top-10-title { 
+    @include mainTypography; 
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    a { 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        color: $accentColor;
+        font-size: 18px;
+        margin-right: 5rem;  
+        &:hover {
+            color: $mainColor; 
+        }
+    }
+}
