@@ -25,7 +25,8 @@ h1 {
     }
 }
 
-.home-top-10-title { 
+.home-top-10-title, 
+.home-crypto-news-title { 
     @include mainTypography; 
     display: flex;
     align-items: center;

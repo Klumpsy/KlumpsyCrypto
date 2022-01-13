@@ -54,9 +54,9 @@ const Homepage = () => {
                 <Cryptocurrencies simplified />
             </div>
             <div>
-                <div>
+                <div className="home-crypto-news-title">
                     <h1>Latest Crypto News</h1>
-                    <Link to="/news">Show more</Link>
+                    <Link to="/news">Show more <MdReadMore size={22} /></Link>
                 </div>
                 <News simplified />
             </div>

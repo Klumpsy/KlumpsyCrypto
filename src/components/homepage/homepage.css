@@ -30,7 +30,8 @@ h1 {
   color: #273a35;
 }
 
-.home-top-10-title {
+.home-top-10-title,
+.home-crypto-news-title {
   font-family: 'Hind Madurai', sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -43,7 +44,8 @@ h1 {
           justify-content: space-between;
 }
 
-.home-top-10-title a {
+.home-top-10-title a,
+.home-crypto-news-title a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -59,7 +61,8 @@ h1 {
   margin-right: 5rem;
 }
 
-.home-top-10-title a:hover {
+.home-top-10-title a:hover,
+.home-crypto-news-title a:hover {
   color: #273a35;
 }
 /*# sourceMappingURL=homepage.css.map */

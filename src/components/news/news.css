@@ -1,4 +1,79 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap");
 .news-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-family: 'Hind Madurai', sans-serif;
   width: 100%;
+}
+
+.news-wrapper .news-item-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 320px;
+  height: 350px;
+  margin: 30px;
+  padding: 10px;
+  border-radius: 16px;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.news-wrapper .news-item-container .news-item-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.news-wrapper .news-item-container .news-item-title h3 {
+  margin-right: 10px;
+}
+
+.news-wrapper .news-item-container .news-item-title img {
+  width: 100px;
+  height: 100px;
+}
+
+.news-wrapper .news-item-container .news-item-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  font-size: 14px;
+}
+
+.news-wrapper .news-item-container .news-item-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px;
+}
+
+.news-wrapper .news-item-container .news-item-link .news-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 /*# sourceMappingURL=news.css.map */
