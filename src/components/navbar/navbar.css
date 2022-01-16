@@ -10,7 +10,7 @@
   height: 100vh;
   width: 300px;
   padding-left: 15px;
-  background-color: #273a35;
+  background: radial-gradient(circle, #273a35 0%, rgba(6, 6, 6, 0.927591) 100%);
   font-family: 'Hind Madurai', sans-serif;
 }
 
@@ -74,7 +74,7 @@
 }
 
 .nav-container .menu-item a:hover .menu-item-icon-cryptocurrencies {
-  color: #070707;
+  color: #575151;
 }
 
 .nav-container .menu-item a:hover .menu-item-icon-exchanges {

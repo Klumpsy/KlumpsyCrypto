@@ -55,7 +55,7 @@
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
-  font-size: 14px;
+  font-size: 13px;
 }
 
 .news-wrapper .news-item-container .news-item-link {
@@ -72,8 +72,22 @@
 }
 
 .news-wrapper .news-item-container .news-item-link .news-avatar {
-  width: 40px;
-  height: 40px;
+  width: 30px;
+  height: 30px;
   border-radius: 50%;
+}
+
+.news-wrapper .news-item-container .news-time-stamp {
+  color: #4e625d;
+  font-size: 12px;
+}
+
+.news-select-menu {
+  padding: 10px;
+  margin: 5px;
+  background-color: #273a35;
+  color: white;
+  font-size: 16px;
+  width: 500px;
 }
 /*# sourceMappingURL=news.css.map */

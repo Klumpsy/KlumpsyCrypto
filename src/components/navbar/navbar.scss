@@ -7,7 +7,7 @@
     height: 100vh; 
     width: 300px; 
     padding-left: 15px; 
-    background-color: $mainColor;
+    background: radial-gradient(circle, rgba(39,58,53,1) 0%, rgba(6,6,6,0.9275911048012955) 100%); 
     @include mainTypography;
     .logo-container { 
         display: flex;
@@ -47,7 +47,7 @@
                 color: $linkHover; 
                 transition: .2s ease-in; 
                 .menu-item-icon-cryptocurrencies { 
-                    color: rgb(7, 7, 7); 
+                    color: rgb(87, 81, 81); 
                 }
                 .menu-item-icon-exchanges { 
                     color: rgb(127, 192, 127); 

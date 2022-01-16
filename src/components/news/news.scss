@@ -1,4 +1,5 @@
 @import "../../typography"; 
+@import "../../colors"; 
 
 .news-wrapper { 
     display: flex; 
@@ -30,7 +31,7 @@
         .news-item-description { 
             display: flex;
             justify-content: flex-end;
-            font-size: 14px;
+            font-size: 13px;
         }
         .news-item-link { 
             display: flex;
@@ -38,10 +39,23 @@
             justify-content: space-between;
             margin-top: 10px; 
             .news-avatar{ 
-                width: 40px; 
-                height: 40px;
+                width: 30px; 
+                height: 30px;
                 border-radius: 50%; 
             }
         }
+        .news-time-stamp { 
+            color: rgb(78, 98, 93); 
+            font-size: 12px;
+        }
     }
+}
+
+.news-select-menu { 
+    padding: 10px;
+    margin: 5px;  
+    background-color: $mainColor;
+    color: white; 
+    font-size: 16px;
+    width: 500px;
 }
