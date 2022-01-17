@@ -31,6 +31,12 @@
         p { 
             margin-top: 10px; 
         }
+        &:hover { 
+            cursor: pointer;
+            transform: scale(1.04);
+            transition: .3s ease-in-out;
+            box-shadow: 1px 1px 20px 5px rgb(50, 65, 56);
+        }
     }
 }
 .search-crypto-bar { 

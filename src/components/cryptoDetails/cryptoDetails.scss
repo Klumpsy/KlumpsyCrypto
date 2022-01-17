@@ -1,0 +1,66 @@
+@import "../../typography"; 
+@import "../../colors"; 
+
+.crypto-details-container { 
+    @include mainTypography; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; 
+    .crypto-details-wrapper { 
+        max-width: 1500px; 
+        padding: 25px; 
+        .crypto-details-header { 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .crypto-details-image { 
+                width: 300px; 
+                margin: 30px; 
+            }
+            .crypto-details-title { 
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                h1 { 
+                    font-size: 4rem;
+                }
+                p { 
+                    font-size: 24px;
+                    font-weight: 600;
+                }
+            }
+        }
+        .crypto-details-stats { 
+            display: flex;
+            width: 100%; 
+            margin-bottom: 30px;
+            margin-top: 30px;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            span { 
+                display: flex;
+                align-items: center;
+                margin-bottom: 15px; 
+                p { 
+                    margin-left: 8px; 
+                }
+            }
+        }
+        .crypto-details-description { 
+            max-width: 1000px; 
+        }
+        .crypto-details-links { 
+            display: flex;
+            margin-top: 20px; 
+            flex-direction: column;
+            a { 
+                color: $mainColor; 
+                font-size: 18px;
+                &:hover { 
+                    color: $linkHover; 
+                }
+            }
+        }
+    }
+}

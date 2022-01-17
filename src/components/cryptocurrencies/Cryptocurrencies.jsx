@@ -35,14 +35,16 @@ const Cryptocurrencies = ({ simplified }) => {
             }
             <div className="crypto-container">
                 {cryptos?.map(crypto => (
-                    <div className='crypto-card' key={crypto.symbol}>
-                        <h3>{crypto.rank}. {crypto.name}({crypto.symbol})</h3>
-                        <img src={crypto.iconUrl} className="crypto-card-icon" />
-                        <p>${millify(crypto.price, { precision: 2, lowercase: true })}</p>
-                        <p>MarketCap: {millify(crypto.marketCap)}</p>
-                        <p>24h Volume: {millify(crypto['24hVolume'])}</p>
-                        <p>Daily Change: {crypto.change}%</p>
-                    </div>
+                    <Link to={`/crypto/${crypto.uuid}`} key={crypto.uuid}>
+                        <div className='crypto-card'>
+                            <h3>{crypto.rank}. {crypto.name}({crypto.symbol})</h3>
+                            <img src={crypto.iconUrl} className="crypto-card-icon" />
+                            <p>${millify(crypto.price, { precision: 2, lowercase: true })}</p>
+                            <p>MarketCap: {millify(crypto.marketCap)}</p>
+                            <p>24h Volume: {millify(crypto['24hVolume'])}</p>
+                            <p>Daily Change: {crypto.change}%</p>
+                        </div>
+                    </Link>
                 ))}
             </div>
         </>

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 
 import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../../services/cryptoApi';

@@ -1,0 +1,110 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap");
+.crypto-details-container {
+  font-family: 'Hind Madurai', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.crypto-details-container .crypto-details-wrapper {
+  max-width: 1500px;
+  padding: 25px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-image {
+  width: 300px;
+  margin: 30px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-title h1 {
+  font-size: 4rem;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-title p {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-stats {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.2rem;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-stats span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 15px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-stats span p {
+  margin-left: 8px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-description {
+  max-width: 1000px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links a {
+  color: #273a35;
+  font-size: 18px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links a:hover {
+  color: #6e7e75;
+}
+/*# sourceMappingURL=cryptoDetails.css.map */
