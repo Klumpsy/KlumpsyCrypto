@@ -12,13 +12,23 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 20px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  -webkit-box-shadow: rgba(25, 25, 26, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+          box-shadow: rgba(25, 25, 26, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
 
 .exchange-card:nth-child(odd) {
   background-color: #677772;
   color: white;
+}
+
+@media (max-width: 800px) {
+  .exchange-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 120px;
+  }
 }
 
 .exchange-card .exchange-data {
@@ -38,5 +48,15 @@
 
 .exchange-card .exchange-data a:hover {
   color: #6e7e75;
+}
+
+@media (max-width: 800px) {
+  .exchange-card .exchange-data {
+    margin-right: 0px;
+    width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 12px;
+  }
 }
 /*# sourceMappingURL=exchanges.css.map */

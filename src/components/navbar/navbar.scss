@@ -39,6 +39,10 @@
             margin-left: 10px; 
             color: white; 
             font-size: 20px;
+            @include for-custom-media(400px) { 
+                font-size: 15px; 
+                margin-left: 5px; 
+            }
         }
         &:hover { 
             .logo{ 

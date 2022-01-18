@@ -2,8 +2,6 @@ import React, { useState, useEffect } from 'react';
 import millify from 'millify';
 import { Link } from "react-router-dom";
 
-import { RiSearchEyeLine } from "react-icons/ri";
-
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 
 import "./cryptocurrencies.css"
@@ -30,7 +28,6 @@ const Cryptocurrencies = ({ simplified }) => {
             {!simplified &&
                 <div className="search-crypto-bar">
                     <input placeholder="Search Cryptocurrency" onChange={(e) => setSearchTerm(e.target.value)} />
-                    <RiSearchEyeLine size={25} />
                 </div>
             }
             <div className="crypto-container">

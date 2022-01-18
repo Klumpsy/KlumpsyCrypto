@@ -1,5 +1,6 @@
 @import "../../typography"; 
 @import "../../colors"; 
+@import "../../mediaQuery"; 
 
 .exchange-card { 
     @include mainTypography; 
@@ -8,10 +9,14 @@
     height: 80px; 
     justify-content: space-between; 
     padding: 20px; 
-    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    box-shadow: rgba(25, 25, 26, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     &:nth-child(odd) { 
         background-color: $accentColor;
         color: white;
+    }
+    @include for-custom-media(800px) {
+        flex-direction: column; 
+        height: 120px; 
     }
     .exchange-data { 
         display: flex; 
@@ -23,6 +28,12 @@
             &:hover { 
                 color: $linkHover; 
             }
+        }
+        @include for-custom-media(800px) {
+            margin-right: 0px; 
+            width: 100%; 
+            justify-content: space-around;
+            font-size: 12px; 
         }
     }
 }

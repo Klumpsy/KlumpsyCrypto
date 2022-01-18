@@ -7,7 +7,7 @@ import { cryptoExchangesApi } from "../services/cryptoExchangesApi";
 export default configureStore({
     reducer: {
         [cryptoApi.reducerPath]: cryptoApi.reducer,
+        [cryptoExchangesApi.reducerPath]: cryptoExchangesApi.reducer,
         [cryptoNewsApi.reducerPath]: cryptoNewsApi.reducer,
-        [cryptoExchangesApi.reducerPath]: cryptoExchangesApi.reducer
     }, 
 })

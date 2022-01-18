@@ -1,5 +1,6 @@
 @import "../../typography"; 
-@import "../../colors"; 
+@import "../../colors";
+@import "../../mediaQuery";  
 
 h1 { 
     padding: 5px;
@@ -8,6 +9,10 @@ h1 {
 
 .home-global-stats-title { 
     margin-left: 40px; 
+    @include for-custom-media(500px) { 
+        text-align: center; 
+        margin-left: 0px; 
+    }
 }
 
 .home-stats-wrapper { 
@@ -16,6 +21,13 @@ h1 {
     justify-content: space-between;
     margin: 10px; 
     margin-left: 45px;
+    @include for-custom-media(768px) { 
+        flex-direction: column;
+        justify-content: center;
+    }
+    @include for-custom-media(500px) { 
+        margin: 0 auto;
+    }
     .home-stats-container{ 
         width: 100%; 
         h2 { 
@@ -49,6 +61,16 @@ h1 {
         margin-right: 5rem;  
         &:hover {
             color: $mainColor; 
+        }
+    }
+    @include for-custom-media(500px) { 
+        flex-direction: column;   
+        h1 { 
+            margin-left: 0px;
+            text-align: center;
+        }
+        a { 
+            margin-right: 0px; 
         }
     }
 }

@@ -1,7 +1,7 @@
 import { createApi, fetchBaseQuery} from '@reduxjs/toolkit/query/react'; 
 
 const cryptoApiExchangesHeaders = {
-    "X-CoinAPI-Key": "F704483C-3D35-433C-85AD-03AC5CE9D704"
+    "X-CoinAPI-Key": process.env.REACT_APP_CRYPTO_EXCHANGES_API_KEY
   }
 
 const baseUrl = 'https://rest.coinapi.io/v1'; 
@@ -9,7 +9,7 @@ const baseUrl = 'https://rest.coinapi.io/v1';
 const createRequest = (url) => ({url, headers: cryptoApiExchangesHeaders})
 
 export const cryptoExchangesApi = createApi({ 
-    reducerPath: 'cryptoNewsApi', 
+    reducerPath: 'cryptoExchangesApi', 
     baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: (builder) => ({
         getCryptoExchanges: builder.query({
