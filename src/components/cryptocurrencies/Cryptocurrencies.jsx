@@ -35,7 +35,7 @@ const Cryptocurrencies = ({ simplified }) => {
             }
             <div className="crypto-container">
                 {cryptos?.map(crypto => (
-                    <Link to={`/crypto/${crypto.uuid}`} key={crypto.uuid}>
+                    <Link to={`/crypto/${crypto.uuid}`} key={crypto.uuid} style={{ textDecoration: "none" }}>
                         <div className='crypto-card'>
                             <h3>{crypto.rank}. {crypto.name}({crypto.symbol})</h3>
                             <img src={crypto.iconUrl} className="crypto-card-icon" />

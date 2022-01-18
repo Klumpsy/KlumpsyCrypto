@@ -14,6 +14,13 @@
   font-family: 'Hind Madurai', sans-serif;
 }
 
+@media (max-width: 1068px) {
+  .nav-container {
+    height: 100px;
+    width: 100%;
+  }
+}
+
 .nav-container .logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,6 +30,29 @@
           align-items: center;
   margin-bottom: 30px;
   margin-top: 30px;
+}
+
+@media (max-width: 1068px) {
+  .nav-container .logo-container {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.nav-container .logo-container .nav-menu-hamburger-button {
+  margin-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 4px;
+  background-color: white;
 }
 
 .nav-container .logo-container .logo {
@@ -49,13 +79,23 @@
           transform: scale(1.2);
 }
 
-.nav-container .menu-item {
+@media (max-width: 1068px) {
+  .nav-container .menu-item-container {
+    z-index: 10;
+    background-color: #273a35;
+    padding: 10px;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+  }
+}
+
+.nav-container .menu-item-container .menu-item {
   margin-bottom: 20px;
   border-bottom: 1px solid #6e7e75;
   padding: 4px;
 }
 
-.nav-container .menu-item a {
+.nav-container .menu-item-container .menu-item a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -67,25 +107,25 @@
   font-size: 12px;
 }
 
-.nav-container .menu-item a:hover {
+.nav-container .menu-item-container .menu-item a:hover {
   color: #6e7e75;
   -webkit-transition: .2s ease-in;
   transition: .2s ease-in;
 }
 
-.nav-container .menu-item a:hover .menu-item-icon-cryptocurrencies {
+.nav-container .menu-item-container .menu-item a:hover .menu-item-icon-cryptocurrencies {
   color: #575151;
 }
 
-.nav-container .menu-item a:hover .menu-item-icon-exchanges {
+.nav-container .menu-item-container .menu-item a:hover .menu-item-icon-exchanges {
   color: #7fc07f;
 }
 
-.nav-container .menu-item a:hover .menu-item-icon-news {
+.nav-container .menu-item-container .menu-item a:hover .menu-item-icon-news {
   color: #8ed1dd;
 }
 
-.nav-container .menu-item a .menu-item-icon {
+.nav-container .menu-item-container .menu-item a .menu-item-icon {
   margin-right: 10px;
 }
 /*# sourceMappingURL=navbar.css.map */

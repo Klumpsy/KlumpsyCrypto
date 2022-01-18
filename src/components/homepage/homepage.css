@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap");
 h1 {
-  padding: 10px;
+  padding: 5px;
   font-family: 'Hind Madurai', sans-serif;
+}
+
+.home-global-stats-title {
+  margin-left: 40px;
 }
 
 .home-stats-wrapper {
@@ -13,6 +17,7 @@ h1 {
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin: 10px;
+  margin-left: 45px;
 }
 
 .home-stats-wrapper .home-stats-container {
@@ -42,6 +47,11 @@ h1 {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.home-top-10-title h1,
+.home-crypto-news-title h1 {
+  margin-left: 40px;
 }
 
 .home-top-10-title a,

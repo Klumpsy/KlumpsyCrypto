@@ -50,15 +50,41 @@
         .crypto-details-description { 
             max-width: 1000px; 
         }
-        .crypto-details-links { 
+        .crypto-details-links-chart-container { 
             display: flex;
-            margin-top: 20px; 
-            flex-direction: column;
-            a { 
-                color: $mainColor; 
-                font-size: 18px;
-                &:hover { 
-                    color: $linkHover; 
+            .crypto-details-links { 
+                display: flex;
+                margin-top: 20px; 
+                flex-direction: column;
+                width: 400px;
+                padding: 15px; 
+                border: 2px solid $mainColor; 
+                border-radius: 16px;
+                }
+            
+                .crypto-details-link-container { 
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 5px; 
+                    border-radius: 8px;
+                    a { 
+                        color: $mainColor; 
+                        font-size: 18px;
+                        margin-left: 5px;
+                        &:hover { 
+                        color: $linkHover; 
+                    }
+                }
+                &:nth-child(odd) { 
+                    background-color: $accentColor;
+                    color: white;
+                    a { 
+                        color: white;
+                        &:hover { 
+                            color: rgb(161, 177, 157); 
+                        }
+                    }
                 }
             }
         }

@@ -19,7 +19,7 @@ const Homepage = () => {
 
     return (
         <>
-            <h1>Global Crypto Statistics</h1>
+            <h1 className="home-global-stats-title">Global Crypto Statistics</h1>
             <div className="home-stats-wrapper">
                 <div className="home-stats-container">
                     <div>

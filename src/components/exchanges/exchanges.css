@@ -1,0 +1,42 @@
+@import url("https://fonts.googleapis.com/css2?family=Hind+Madurai:wght@500&display=swap");
+.exchange-card {
+  font-family: 'Hind Madurai', sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+          box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.exchange-card:nth-child(odd) {
+  background-color: #677772;
+  color: white;
+}
+
+.exchange-card .exchange-data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70%;
+  margin-right: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.exchange-card .exchange-data a {
+  color: #273a35;
+}
+
+.exchange-card .exchange-data a:hover {
+  color: #6e7e75;
+}
+/*# sourceMappingURL=exchanges.css.map */

@@ -1,5 +1,6 @@
 @import "../../typography"; 
 @import "../../colors"; 
+@import "../../mediaQuery"; 
 
 .nav-container {
     display: flex; 
@@ -8,12 +9,27 @@
     width: 300px; 
     padding-left: 15px; 
     background: radial-gradient(circle, rgba(39,58,53,1) 0%, rgba(6,6,6,0.9275911048012955) 100%); 
+    @include for-custom-media(1068px) { 
+        height: 100px; 
+        width: 100%;
+    }
     @include mainTypography;
     .logo-container { 
         display: flex;
         align-items: center;
         margin-bottom: 30px; 
         margin-top: 30px; 
+        @include for-custom-media(1068px) {
+            justify-content: space-between; 
+        }
+        .nav-menu-hamburger-button { 
+            margin-right: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 4px;
+            background-color: white; 
+        }
         .logo { 
             color: white; 
         }
@@ -33,31 +49,39 @@
             cursor: pointer;
         }
     }
-    .menu-item { 
-        margin-bottom: 20px; 
-        border-bottom: 1px solid $linkHover; 
-        padding: 4px; 
-        a { 
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: white; 
-            font-size: 12px;
-            &:hover { 
-                color: $linkHover; 
-                transition: .2s ease-in; 
-                .menu-item-icon-cryptocurrencies { 
-                    color: rgb(87, 81, 81); 
+    .menu-item-container { 
+        @include for-custom-media(1068px) {
+            z-index: 10;
+            background-color: $mainColor; 
+            padding: 10px;
+            transition: .3s ease-in-out;
+        }
+        .menu-item { 
+            margin-bottom: 20px; 
+            border-bottom: 1px solid $linkHover; 
+            padding: 4px; 
+            a { 
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                color: white; 
+                font-size: 12px;
+                &:hover { 
+                    color: $linkHover; 
+                    transition: .2s ease-in; 
+                    .menu-item-icon-cryptocurrencies { 
+                        color: rgb(87, 81, 81); 
+                    }
+                    .menu-item-icon-exchanges { 
+                        color: rgb(127, 192, 127); 
+                    }
+                    .menu-item-icon-news { 
+                        color: rgb(142, 209, 221); 
+                    }
                 }
-                .menu-item-icon-exchanges { 
-                    color: rgb(127, 192, 127); 
+                .menu-item-icon { 
+                    margin-right: 10px; 
                 }
-                .menu-item-icon-news { 
-                    color: rgb(142, 209, 221); 
-                }
-            }
-            .menu-item-icon { 
-                margin-right: 10px; 
             }
         }
     }

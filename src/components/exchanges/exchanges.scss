@@ -1,0 +1,28 @@
+@import "../../typography"; 
+@import "../../colors"; 
+
+.exchange-card { 
+    @include mainTypography; 
+    display: flex;
+    align-items: center;
+    height: 80px; 
+    justify-content: space-between; 
+    padding: 20px; 
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+    &:nth-child(odd) { 
+        background-color: $accentColor;
+        color: white;
+    }
+    .exchange-data { 
+        display: flex; 
+        width: 70%; 
+        margin-right: 25px; 
+        justify-content: space-between;
+        a { 
+            color: $mainColor; 
+            &:hover { 
+                color: $linkHover; 
+            }
+        }
+    }
+}

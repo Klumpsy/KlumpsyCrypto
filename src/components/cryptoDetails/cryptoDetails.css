@@ -88,7 +88,13 @@
   max-width: 1000px;
 }
 
-.crypto-details-container .crypto-details-wrapper .crypto-details-links {
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -97,14 +103,46 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  width: 400px;
+  padding: 15px;
+  border: 2px solid #273a35;
+  border-radius: 16px;
 }
 
-.crypto-details-container .crypto-details-wrapper .crypto-details-links a {
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 5px;
+  border-radius: 8px;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container a {
   color: #273a35;
   font-size: 18px;
+  margin-left: 5px;
 }
 
-.crypto-details-container .crypto-details-wrapper .crypto-details-links a:hover {
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container a:hover {
   color: #6e7e75;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container:nth-child(odd) {
+  background-color: #677772;
+  color: white;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container:nth-child(odd) a {
+  color: white;
+}
+
+.crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container:nth-child(odd) a:hover {
+  color: #a1b19d;
 }
 /*# sourceMappingURL=cryptoDetails.css.map */

@@ -15,15 +15,23 @@ import { BsTrophy } from "react-icons/bs";
 import { TiArrowLoop } from "react-icons/ti";
 import { MdApproval } from "react-icons/md";
 
+//Components 
+import Linechart from '../linechart/Linechart';
 
+//API
 import { useGetCryptoDetailsQuery } from "../../services/cryptoApi";
+import { useGetCryptoHistoryQuery } from "../../services/cryptoApi";
 
 import "./cryptoDetails.css";
+import { Line } from 'react-chartjs-2';
 
 const CryptoDetails = () => {
     const { coinId } = useParams();
     const [timePeriod, setTimePeriod] = useState('7d');
+
     const { data, isFetching } = useGetCryptoDetailsQuery(coinId);
+    const { data: coinHistory } = useGetCryptoHistoryQuery({ coinId, timePeriod })
+
     const cryptoDetails = data?.data?.coin
 
     console.log(data)
@@ -68,7 +76,7 @@ const CryptoDetails = () => {
                             {changeIcon(cryptoDetails.change)}
                             Change: <p style={checkChange(cryptoDetails.change) ?
                                 { color: "red", marginLeft: "5px" } : { color: "green", marginLeft: "5px" }}>
-                                {millify(cryptoDetails.change, 2)}%</p>
+                                {millify(cryptoDetails.change, { precision: 2 })}%</p>
                         </span>
                         <span>
                             <MdOutlineChangeCircle size={25} />
@@ -82,11 +90,11 @@ const CryptoDetails = () => {
                     <div>
                         <span>
                             <img className="crypto-details-image" src={cryptoDetails.iconUrl} style={{ width: "25px" }} />
-                            <p>Current Price: ${millify(cryptoDetails.price)}</p>
+                            <p>Current Price: ${millify(cryptoDetails.price, { precision: 2 })}</p>
                         </span>
                         <span>
                             <BsTrophy size={25} />
-                            <p>ATH: ${millify(cryptoDetails.allTimeHigh["price"])}</p>
+                            <p>ATH: ${millify(cryptoDetails.allTimeHigh["price"], { precision: 2 })}</p>
                         </span>
                         <span>
                             <TiArrowLoop size={25} />
@@ -98,14 +106,22 @@ const CryptoDetails = () => {
                         </span>
                     </div>
                 </div>
+
+                <Linechart coinHistory={coinHistory} currentPrice={millify(cryptoDetails.price)} name={cryptoDetails.name} />
+
                 <div className="crypto-details-description">
                     {HTMLReactParser(cryptoDetails.description)}
                 </div>
-                <div className="crypto-details-links">
-                    <h2>{cryptoDetails.name} Links:</h2>
-                    {cryptoDetails?.links?.map(link => (
-                        <a href={link.url} target="_blank">{link.name}</a>
-                    ))}
+                <div className="crypto-details-links-chart-container">
+                    <div className="crypto-details-links">
+                        <h2>{cryptoDetails.name} Links:</h2>
+                        {cryptoDetails?.links?.map(link => (
+                            <div className="crypto-details-link-container" key={link.url}>
+                                <p>{link.type}:</p>
+                                <a href={link.url} target="_blank">{link.name}</a>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
