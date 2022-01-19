@@ -1,5 +1,6 @@
 @import "../../typography"; 
 @import "../../colors"; 
+@import "../../mediaQuery"; 
 
 .crypto-details-container { 
     @include mainTypography; 
@@ -10,13 +11,23 @@
     .crypto-details-wrapper { 
         max-width: 1500px; 
         padding: 25px; 
+        @include for-custom-media(460px) {
+           padding: 2px;
+        }
         .crypto-details-header { 
             display: flex;
             justify-content: center;
             align-items: center;
+            @include for-custom-media(1150px) {
+                flex-direction: column;
+            }
             .crypto-details-image { 
                 width: 300px; 
                 margin: 30px; 
+                @include for-custom-media(1150px) {
+                    width: 150px; 
+                    margin: 15px; 
+                }
             }
             .crypto-details-title { 
                 display: flex;
@@ -24,6 +35,10 @@
                 align-items: center;
                 h1 { 
                     font-size: 4rem;
+                    @include for-custom-media(668px) {
+                        font-size: 2.5rem; 
+                        text-align: center;
+                    }
                 }
                 p { 
                     font-size: 24px;
@@ -38,6 +53,11 @@
             margin-top: 30px;
             justify-content: space-between;
             font-size: 1.2rem;
+            @include for-custom-media(668px) {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
             span { 
                 display: flex;
                 align-items: center;
@@ -60,7 +80,15 @@
                 padding: 15px; 
                 border: 2px solid $mainColor; 
                 border-radius: 16px;
+                @include for-custom-media(460px) {
+                    width: 300px; 
+                    margin: 20px auto; 
                 }
+                @include for-custom-media(320px) {
+                    width: 280px; 
+                    margin: 20px auto; 
+                }
+            }
             
                 .crypto-details-link-container { 
                     display: flex;

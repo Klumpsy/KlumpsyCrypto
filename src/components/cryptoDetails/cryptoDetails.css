@@ -18,6 +18,12 @@
   padding: 25px;
 }
 
+@media (max-width: 460px) {
+  .crypto-details-container .crypto-details-wrapper {
+    padding: 2px;
+  }
+}
+
 .crypto-details-container .crypto-details-wrapper .crypto-details-header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -30,9 +36,25 @@
           align-items: center;
 }
 
+@media (max-width: 1150px) {
+  .crypto-details-container .crypto-details-wrapper .crypto-details-header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-image {
   width: 300px;
   margin: 30px;
+}
+
+@media (max-width: 1150px) {
+  .crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-image {
+    width: 150px;
+    margin: 15px;
+  }
 }
 
 .crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-title {
@@ -52,6 +74,13 @@
   font-size: 4rem;
 }
 
+@media (max-width: 668px) {
+  .crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-title h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+}
+
 .crypto-details-container .crypto-details-wrapper .crypto-details-header .crypto-details-title p {
   font-size: 24px;
   font-weight: 600;
@@ -68,6 +97,21 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-size: 1.2rem;
+}
+
+@media (max-width: 668px) {
+  .crypto-details-container .crypto-details-wrapper .crypto-details-stats {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .crypto-details-container .crypto-details-wrapper .crypto-details-stats span {
@@ -107,6 +151,20 @@
   padding: 15px;
   border: 2px solid #273a35;
   border-radius: 16px;
+}
+
+@media (max-width: 460px) {
+  .crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-links {
+    width: 300px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 320px) {
+  .crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-links {
+    width: 280px;
+    margin: 20px auto;
+  }
 }
 
 .crypto-details-container .crypto-details-wrapper .crypto-details-links-chart-container .crypto-details-link-container {

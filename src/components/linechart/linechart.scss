@@ -1,5 +1,19 @@
+@import "../../mediaQuery"; 
+
 .line-chart-container { 
     width: 800px; 
-    height: 400px; 
     margin-bottom: 3.4rem;
+    @include for-custom-media(1150px) {
+        width: 600px; 
+        margin: 20px auto; 
+    }
+    @include for-custom-media(668px) {
+        width: 400px; 
+    }
+    @include for-custom-media(460px) {
+        width: 350px; 
+    }
+    @include for-custom-media(350px) {
+        width: 280px; 
+    }
 }

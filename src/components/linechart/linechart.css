@@ -1,6 +1,30 @@
 .line-chart-container {
   width: 800px;
-  height: 400px;
   margin-bottom: 3.4rem;
+}
+
+@media (max-width: 1150px) {
+  .line-chart-container {
+    width: 600px;
+    margin: 20px auto;
+  }
+}
+
+@media (max-width: 668px) {
+  .line-chart-container {
+    width: 400px;
+  }
+}
+
+@media (max-width: 460px) {
+  .line-chart-container {
+    width: 350px;
+  }
+}
+
+@media (max-width: 350px) {
+  .line-chart-container {
+    width: 280px;
+  }
 }
 /*# sourceMappingURL=linechart.css.map */

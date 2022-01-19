@@ -34,8 +34,6 @@ const CryptoDetails = () => {
 
     const cryptoDetails = data?.data?.coin
 
-    console.log(data)
-
     if (isFetching) return "loading.."
 
     const checkChange = (number) => {
