@@ -76,7 +76,7 @@
     font-size: 16px;
     width: 500px;
     font-weight: 550;
-    transition: 1s ease-in; 
+    transition: .5s ease-in; 
     @include for-custom-media(520px) {
         width: 280px; 
         margin: 5px auto; 

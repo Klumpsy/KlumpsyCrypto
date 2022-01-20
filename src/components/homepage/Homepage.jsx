@@ -1,6 +1,7 @@
 import React from 'react';
 import millify from 'millify';
 import { Link } from 'react-router-dom';
+import ReactLoading from 'react-loading';
 
 import { MdReadMore } from 'react-icons/md'
 
@@ -15,7 +16,7 @@ const Homepage = () => {
     const { data, isFetching } = useGetCryptosQuery(10);
     const globalStats = data?.data?.stats
 
-    if (isFetching) return "Loading..."
+    if (isFetching) return <div className="spinner-loader-container"><ReactLoading type="spinningBubbles" color="rgb(103, 119, 114)" height={50} width={50} /></div>
 
     return (
         <>

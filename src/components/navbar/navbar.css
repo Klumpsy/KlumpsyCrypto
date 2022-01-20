@@ -55,6 +55,12 @@
   background-color: white;
 }
 
+.nav-container .logo-container .nav-menu-hamburger-button:hover {
+  cursor: pointer;
+  background-color: #677772;
+  color: white;
+}
+
 .nav-container .logo-container .logo {
   color: white;
 }

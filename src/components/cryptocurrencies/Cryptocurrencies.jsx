@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import millify from 'millify';
 import { Link } from "react-router-dom";
+import ReactLoading from "react-loading";
 
 import { useGetCryptosQuery } from '../../services/cryptoApi';
 
@@ -21,7 +22,7 @@ const Cryptocurrencies = ({ simplified }) => {
         setCryptos(filteredData)
     }, [cryptosList, searchTerm])
 
-    if (isFetching) return 'Loading...'
+    if (isFetching) return <ReactLoading type="spinningBubbles" color="rgb(103, 119, 114)" height={50} width={50} />
 
     return (
         <>

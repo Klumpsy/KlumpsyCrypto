@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import HTMLReactParser from "html-react-parser";
 import { useParams } from 'react-router-dom';
 import millify from 'millify';
+import ReactLoading from "react-loading";
 
 //icons
 import { FaCheck } from "react-icons/fa";
@@ -34,7 +35,7 @@ const CryptoDetails = () => {
 
     const cryptoDetails = data?.data?.coin
 
-    if (isFetching) return "loading.."
+    if (isFetching) return <div className="spinner-loader-container"><ReactLoading type="spinningBubbles" color="rgb(103, 119, 114)" height={50} width={50} style={{ margin: "20px auto" }} /></div>
 
     const checkChange = (number) => {
         const regEx = /[-]/

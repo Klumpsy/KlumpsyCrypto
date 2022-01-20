@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import ReactLoading from 'react-loading';
 
 import { useGetCryptoNewsQuery } from '../../services/cryptoNewsApi';
 import { useGetCryptosQuery } from '../../services/cryptoApi';
@@ -12,7 +13,7 @@ const News = ({ simplified }) => {
     const { data: cryptoNews } = useGetCryptoNewsQuery({ newsCategory: newsCategory, count: simplified ? 6 : 100 });
     const { data } = useGetCryptosQuery(100);
 
-    if (!cryptoNews?.value) return "Loading..."
+    if (!cryptoNews?.value) return <div className="spinner-loader-container"><ReactLoading type="spinningBubbles" color="rgb(103, 119, 114)" height={50} width={50} /></div>
 
     return (
         <>

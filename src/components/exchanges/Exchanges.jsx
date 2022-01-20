@@ -1,6 +1,7 @@
 import React from 'react';
 import millify from 'millify';
 import "./exchanges.css"
+import ReactLoading from 'react-loading';
 
 import { useGetCryptoExchangesQuery } from "../../services/cryptoExchangesApi";
 
@@ -9,7 +10,7 @@ const Exchanges = () => {
     const { data: exchanges, isFetching } = useGetCryptoExchangesQuery();
 
     console.log(exchanges)
-    if (isFetching) return "Loading..."
+    if (isFetching) return <div className="spinner-loader-container"><ReactLoading type="spinningBubbles" color="rgb(103, 119, 114)" height={50} width={50} /></div>
 
     return (
         <div>

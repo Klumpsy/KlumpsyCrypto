@@ -29,6 +29,11 @@
             align-items: center;
             padding: 4px;
             background-color: white; 
+            &:hover { 
+                cursor: pointer;
+                background-color: $accentColor;
+                color: white; 
+            }
         }
         .logo { 
             color: white; 

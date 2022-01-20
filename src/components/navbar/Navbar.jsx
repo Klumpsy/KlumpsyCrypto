@@ -9,11 +9,18 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { AiOutlineClose } from "react-icons/ai";
 
 import "./navbar.css"
-import reactRouterDom from 'react-router-dom'
 
 const Navbar = () => {
     const [activeMenu, setActiveMenu] = useState(true);
     const [screenSize, setScreenSize] = useState(null);
+
+    const menuCloser = () => {
+        if (screenSize < 1068) {
+            setActiveMenu(false)
+        } else {
+            return
+        }
+    }
 
     useEffect(() => {
         const handleResize = () => setScreenSize(window.innerWidth);
@@ -49,19 +56,19 @@ const Navbar = () => {
             {activeMenu && (
                 <div className="menu-item-container">
                     <div className="menu-item">
-                        <Link to="/cryptocurrencies">
+                        <Link to="/cryptocurrencies" onClick={() => menuCloser()}>
                             <FaEthereum size={25} className="menu-item-icon menu-item-icon-cryptocurrencies" />
                             <h2>Cryptocurrencies</h2>
                         </Link>
                     </div>
                     <div className="menu-item">
-                        <Link to="/exchanges">
+                        <Link to="/exchanges" onClick={() => menuCloser()}>
                             <BsGraphUp size={25} className="menu-item-icon menu-item-icon-exchanges" />
                             <h2>Exchanges</h2>
                         </Link>
                     </div>
                     <div className="menu-item">
-                        <Link to="/news">
+                        <Link to="/news" onClick={() => menuCloser()}>
                             <RiArticleLine size={25} className="menu-item-icon menu-item-icon-news" />
                             <h2>News</h2>
                         </Link>
