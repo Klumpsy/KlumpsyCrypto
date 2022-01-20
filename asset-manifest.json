@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.13f15954.css",
-    "main.js": "/static/js/main.718758f0.js",
-    "index.html": "/index.html",
-    "main.13f15954.css.map": "/static/css/main.13f15954.css.map",
-    "main.718758f0.js.map": "/static/js/main.718758f0.js.map"
+    "main.css": "/KlumpsyCrypto/static/css/main.13f15954.css",
+    "main.js": "/KlumpsyCrypto/static/js/main.b505217e.js",
+    "index.html": "/KlumpsyCrypto/index.html",
+    "main.13f15954.css.map": "/KlumpsyCrypto/static/css/main.13f15954.css.map",
+    "main.b505217e.js.map": "/KlumpsyCrypto/static/js/main.b505217e.js.map"
   },
   "entrypoints": [
     "static/css/main.13f15954.css",
-    "static/js/main.718758f0.js"
+    "static/js/main.b505217e.js"
   ]
 }
